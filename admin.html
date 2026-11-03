@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración | Portal Educativo JME N°1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+</head>
+<body data-dashboard-role="admin">
+    <nav class="site-nav"><div class="nav-inner">
+        <a class="brand" href="admin.html"><span class="brand-mark">⚙️</span><span class="brand-name">JME N°1<span class="brand-subtitle">Administración</span></span></a>
+        <div class="nav-links"><a href="alumno.html">Portal alumno</a><a href="gestionar-cuentas.html">👥 Crear cuentas</a><a href="mi-perfil.html">👤 Mi Perfil</a><button class="nav-exit" type="button" data-logout>Cerrar sesión</button></div>
+    </div></nav>
+    <main class="dashboard-wrap">
+        <header class="dashboard-head"><div><p class="eyebrow">Panel de control</p><h1 class="dashboard-title">Administración del portal</h1><p>Elige una sección para abrirla en su propia página.</p></div><span class="badge">Firebase</span></header>
+        <div class="notice-banner">Los permisos y el acceso a los datos se validan con Firebase Authentication y las reglas de Firestore del proyecto.</div>
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Secciones de administración">
+                <a href="admin.html" aria-current="page">📊 Resumen</a>
+                <a href="admin-asistencia.html">👥 Asistencia</a>
+                <a href="admin-avisos.html">📢 Avisos</a>
+                <a href="admin-cursos.html">📚 Cursos</a>
+                <a href="gestionar-cuentas.html">👥 Crear cuentas</a>
+                <a href="admin-contactos.html">📇 Contactos</a>
+                <a href="admin-consultas.html">✉️ Consultas</a>
+                <a href="admin-configuracion.html">⚙️ Configuración</a>
+            </aside>
+            <div class="dashboard-main">
+                <section class="dashboard-panel"><h2>Resumen</h2><div class="stats-grid" data-stats></div></section>
+                <section class="dashboard-panel">
+                    <h2>Secciones de administración</h2>
+                    <div class="dashboard-cards">
+                        <a class="dashboard-link" href="admin-asistencia.html"><article class="card"><span class="card-icon">👥</span><h3>Asistencia</h3><p>Consulta y gestiona la asistencia de los cursos.</p></article></a>
+                        <a class="dashboard-link" href="admin-avisos.html"><article class="card"><span class="card-icon">📢</span><h3>Avisos</h3><p>Crear, editar y retirar publicaciones.</p></article></a>
+                        <a class="dashboard-link" href="admin-cursos.html"><article class="card"><span class="card-icon">📚</span><h3>Cursos</h3><p>Editar y publicar los cursos del portal.</p></article></a>
+                        <a class="dashboard-link" href="gestionar-cuentas.html"><article class="card"><span class="card-icon">👔</span><h3>Cuentas institucionales</h3><p>Crear cuentas de preceptoría, dirección y administración.</p></article></a>
+                        <a class="dashboard-link" href="admin-contactos.html"><article class="card"><span class="card-icon">📇</span><h3>Contactos</h3><p>Administrar el directorio de contactos.</p></article></a>
+                        <a class="dashboard-link" href="admin-consultas.html"><article class="card"><span class="card-icon">✉️</span><h3>Consultas</h3><p>Leer y responder consultas recibidas.</p></article></a>
+                        <a class="dashboard-link" href="admin-configuracion.html"><article class="card"><span class="card-icon">⚙️</span><h3>Configuración</h3><p>Administrar opciones y datos locales.</p></article></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Administración</footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

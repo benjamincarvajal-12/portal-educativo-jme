@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+    <title>Iniciar sesión | Portal Educativo JME N°1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-login-page>
+    <nav class="site-nav"><div class="nav-inner">
+        <a class="brand" href="index.html"><span class="brand-mark">🏫</span><span class="brand-name">JME N°1<span class="brand-subtitle">Portal Educativo</span></span></a>
+        <div class="nav-links"><a href="index.html">Inicio</a></div>
+    </div></nav>
+    <main class="auth-page page-shell">
+        <section class="auth-panel">
+            <p class="eyebrow">Acceso institucional</p>
+            <h1 data-auth-title>Iniciar sesión</h1>
+            <p class="auth-intro" data-login-intro>Ingresa con el correo electrónico o, si tu cuenta no tiene correo, con tu nombre de usuario.</p>
+            <form class="auth-form" data-login-form>
+                <div class="field">
+                    <label for="login-email">Correo electrónico o nombre de usuario</label>
+                    <input class="control" id="login-email" name="email" type="text" autocomplete="username" required maxlength="254" placeholder="nombre@correo.com o usuario">
+                    <p class="auth-login-hint">Si te registraste sin correo, ingresa tu nombre de usuario.</p>
+                </div>
+                <div class="field">
+                    <label for="login-password">Contraseña</label>
+                    <input class="control" id="login-password" name="password" type="password" autocomplete="current-password" required minlength="6">
+                </div>
+                <button class="button auth-submit" type="submit">Iniciar sesión</button>
+            </form>
+            <form class="auth-form" data-register-form hidden>
+                <div class="field"><label for="register-first-name">Nombre</label><input class="control" id="register-first-name" name="first-name" autocomplete="given-name" required maxlength="60"></div>
+                <div class="field"><label for="register-last-name">Apellido</label><input class="control" id="register-last-name" name="last-name" autocomplete="family-name" required maxlength="80"></div>
+                <div class="field">
+                    <label for="register-role">Rol</label>
+                    <select class="control" id="register-role" name="role" required aria-describedby="register-role-hint">
+                        <option value="director">Director</option>
+                        <option value="preceptor">Preceptor</option>
+                        <option value="alumno" selected>Alumno</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                    <p class="auth-login-hint" id="register-role-hint" data-register-role-hint aria-live="polite">El registro en línea está habilitado para alumnos. Las cuentas del personal las crea el administrador institucional.</p>
+                </div>
+                <div class="field">
+                    <label for="register-username">Nombre de usuario</label>
+                    <input class="control" id="register-username" name="username" autocomplete="username" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._\-]{3,30}" title="Usa de 3 a 30 letras, números, puntos, guiones o guiones bajos.">
+                    <p class="auth-login-hint">Si no agregas correo, este será tu nombre para iniciar sesión. No se puede cambiar después.</p>
+                </div>
+                <div class="field">
+                    <label for="register-email">Correo electrónico (opcional)</label>
+                    <input class="control" id="register-email" name="email" type="email" autocomplete="email" maxlength="254">
+                    <p class="auth-email-warning" id="register-email-warning">⚠️ Si no agregas un correo, no habrá un medio para recuperar el acceso si olvidas la contraseña.</p>
+                </div>
+                <div class="field"><label for="register-password">Contraseña</label><input class="control" id="register-password" name="password" type="password" autocomplete="new-password" required minlength="6"></div>
+                <button class="button auth-submit" type="submit">Registrarse</button>
+            </form>
+            <p class="status-message" data-auth-status aria-live="polite"></p>
+            <div class="button-row auth-mode-switch">
+                <button class="button secondary small" type="button" data-auth-mode="register">Registrarse</button>
+            </div>
+            <p class="auth-security-note">Los roles de administrador, dirección y preceptor deben ser asignados por el administrador institucional. Al cerrar la pestaña, tendrás que iniciar sesión nuevamente.</p>
+        </section>
+    </main>
+    <footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Acceso de personal</footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

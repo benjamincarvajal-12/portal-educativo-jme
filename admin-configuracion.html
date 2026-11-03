@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+    <title>Configuración | Administración JME N°1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-dashboard-role="admin">
+    <nav class="site-nav"><div class="nav-inner">
+        <a class="brand" href="admin.html"><span class="brand-mark">⚙️</span><span class="brand-name">JME N°1<span class="brand-subtitle">Administración</span></span></a>
+        <div class="nav-links"><a href="alumno.html">Portal alumno</a><a href="gestionar-cuentas.html">👥 Crear cuentas</a><a href="mi-perfil.html">👤 Mi Perfil</a><button class="nav-exit" type="button" data-logout>Cerrar sesión</button></div>
+    </div></nav>
+    <main class="dashboard-wrap">
+        <header class="dashboard-head"><div><p class="eyebrow">Panel de control</p><h1 class="dashboard-title">Configuración</h1><p>Opciones generales y datos locales del portal.</p></div><span class="badge">Firebase</span></header>
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Secciones de administración">
+                <a href="admin.html">📊 Resumen</a><a href="admin-asistencia.html">👥 Asistencia</a><a href="admin-avisos.html">📢 Avisos</a><a href="admin-cursos.html">📚 Cursos</a><a href="gestionar-cuentas.html">👥 Crear cuentas</a><a href="admin-contactos.html">📇 Contactos</a><a href="admin-consultas.html">✉️ Consultas</a><a href="admin-configuracion.html" aria-current="page">⚙️ Configuración</a>
+            </aside>
+            <div class="dashboard-main"><section class="dashboard-panel">
+                <h2>Datos de demostración locales</h2>
+                <p class="section-copy">Restablece los datos de demostración guardados en este dispositivo. Esta acción no elimina ni modifica información almacenada en Firebase.</p>
+                <button class="button danger" type="button" data-action="reset-demo">Restablecer datos de demostración locales</button>
+            </section></div>
+        </div>
+    </main>
+    <footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Administración</footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

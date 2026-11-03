@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+    <title>Contactos | Administración JME N°1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-dashboard-role="admin">
+    <nav class="site-nav"><div class="nav-inner">
+        <a class="brand" href="admin.html"><span class="brand-mark">⚙️</span><span class="brand-name">JME N°1<span class="brand-subtitle">Administración</span></span></a>
+        <div class="nav-links"><a href="alumno.html">Portal alumno</a><a href="gestionar-cuentas.html">👥 Crear cuentas</a><a href="mi-perfil.html">👤 Mi Perfil</a><button class="nav-exit" type="button" data-logout>Cerrar sesión</button></div>
+    </div></nav>
+    <main class="dashboard-wrap">
+        <header class="dashboard-head"><div><p class="eyebrow">Panel de control</p><h1 class="dashboard-title">Contactos</h1><p>Administra el directorio informativo de la comunidad.</p></div><span class="badge">Firebase</span></header>
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Secciones de administración">
+                <a href="admin.html">📊 Resumen</a><a href="admin-asistencia.html">👥 Asistencia</a><a href="admin-avisos.html">📢 Avisos</a><a href="admin-cursos.html">📚 Cursos</a><a href="gestionar-cuentas.html">👥 Crear cuentas</a><a href="admin-contactos.html" aria-current="page">📇 Contactos</a><a href="admin-consultas.html">✉️ Consultas</a><a href="admin-configuracion.html">⚙️ Configuración</a>
+            </aside>
+            <div class="dashboard-main">
+                <section class="dashboard-panel"><h2>Agregar contacto</h2><p class="form-note">Estos contactos son informativos y no son cuentas de acceso.</p>
+                    <form class="inline-form" data-user-form>
+                        <div class="field"><label for="admin-user-name">Nombre</label><input class="control" id="admin-user-name" name="user-name" required maxlength="80"></div>
+                        <div class="field"><label for="admin-user-role">Función</label><select class="control" id="admin-user-role" name="user-role"><option>Preceptor/a</option><option>Dirección</option><option>Docente</option><option>Otro contacto</option></select></div>
+                        <button class="button" type="submit">Agregar contacto</button><p class="status-message" data-status aria-live="polite"></p>
+                    </form>
+                </section>
+                <section class="dashboard-panel"><h2>Directorio</h2><div class="data-list" data-user-list></div></section>
+            </div>
+        </div>
+    </main>
+    <footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Administración</footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

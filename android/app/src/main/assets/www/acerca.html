@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Acerca del Proyecto</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* MENÚ */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+
+    background:#0f172a;
+
+    padding:15px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.links{
+    display:flex;
+    gap:20px;
+}
+
+.links a{
+    color:white;
+    text-decoration:none;
+}
+
+.links a:hover{
+    color:#60a5fa;
+}
+
+/* CABECERA */
+
+.hero{
+
+    margin-top:70px;
+
+    height:350px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content{
+    animation:entrada 1s ease;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+/* CONTENIDO */
+
+.seccion{
+    padding:80px 10%;
+}
+
+.seccion h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.seccion p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.tarjetas{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-top:30px;
+}
+
+.tarjeta{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-5px);
+}
+
+.tarjeta h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+/* ANIMACIÓN */
+
+@keyframes entrada{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+</style>
+
+<style>
+:root {
+    --ink: #203331;
+    --forest: #174b43;
+    --accent: #c35f43;
+    --paper: #f5f4ef;
+    font-family: "Aptos", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); line-height: 1.7; }
+nav {
+    position: sticky;
+    top: 0;
+    padding: 14px clamp(18px, 5vw, 76px);
+    gap: 18px;
+    background: rgba(23, 75, 67, .97);
+    box-shadow: 0 5px 22px rgba(22, 49, 45, .13);
+    backdrop-filter: blur(12px);
+}
+.logo { font-family: Georgia, "Times New Roman", serif; font-size: 21px; white-space: nowrap; }
+.links { flex-wrap: wrap; justify-content: flex-end; gap: 8px 20px; }
+.links a { color: rgba(255, 255, 255, .86); font-size: 14px; }
+.links a:hover, .links a:focus-visible { color: #f0b495; }
+.hero { min-height: 330px; height: auto; margin-top: 0; padding: 60px 22px; background-position: center 42%; }
+.hero h1 { font-family: Georgia, "Times New Roman", serif; font-size: 46px; }
+.hero p { color: rgba(255, 255, 255, .88); }
+.seccion { max-width: 1200px; margin: auto; padding: 62px clamp(22px, 7vw, 96px) 80px; }
+.seccion h2 { color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 30px; }
+.seccion p { color: #53635e; }
+.tarjetas { gap: 14px; margin-top: 26px; }
+.tarjeta { border: 1px solid #e4e6df; border-top: 3px solid var(--accent); border-radius: 6px; box-shadow: 0 8px 24px rgba(31, 55, 49, .06); }
+.tarjeta:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(31, 55, 49, .1); }
+.tarjeta h3 { color: var(--forest); font-family: Georgia, "Times New Roman", serif; }
+nav a:focus-visible { outline: 2px solid #f0b495; outline-offset: 3px; }
+
+@media (max-width: 700px) {
+    nav { align-items: flex-start; flex-direction: column; }
+    .links { justify-content: flex-start; gap: 7px 16px; }
+    .hero { min-height: 280px; }
+    .hero h1 { font-size: 36px; }
+    .seccion { padding-top: 44px; padding-bottom: 52px; }
+    .seccion h2 { font-size: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+</style>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#0F172A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+</head>
+
+<body>
+
+<nav class="site-nav"><div class="nav-inner">
+    <a class="brand" href="alumno.html"><span class="brand-mark">🏫</span><span class="brand-name">JME N°1<span class="brand-subtitle">Portal Educativo</span></span></a>
+    <div class="nav-links"><a href="alumno.html">🏠 Inicio</a><a href="novedades.html">📰 Novedades</a><a href="cursos.html">📚 Cursos</a><a href="preceptores.html">👨‍🏫 Preceptores</a><a href="acerca.html">ℹ️ Acerca de</a></div>
+</div></nav>
+
+<section class="hero about-hero">
+
+<div class="hero-content">
+
+<h1>ℹ️ Acerca del Proyecto</h1>
+
+<p>
+Conoce el propósito y desarrollo del portal educativo.
+</p>
+
+</div>
+
+</section>
+
+<main class="page-shell">
+    <section class="section split-section reveal">
+        <div class="section-text"><p class="eyebrow">Sobre el proyecto</p><h2>¿Qué es este portal?</h2>
+            <p>Este portal educativo reúne avisos, actividades académicas y recursos para estudiantes del Secundario José Manuel Estrada N°1.</p>
+            <p>Su objetivo es facilitar el acceso a la información y complementar los canales oficiales de comunicación de la institución.</p>
+        </div>
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85" alt="Estudiantes colaborando en el aula"></div>
+    </section>
+
+    <section class="section split-section reverse reveal">
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85" alt="Docente acompañando una clase"></div>
+        <div class="section-text"><p class="eyebrow">Criterios del portal</p><h2>Objetivos</h2>
+            <p>Centralizar avisos y materiales, apoyar la organización escolar y ofrecer una experiencia clara desde computadoras y teléfonos.</p>
+            <p>La información institucional deberá ser publicada y verificada por las personas responsables de cada área.</p>
+        </div>
+    </section>
+
+    <section class="section split-section reveal">
+        <div class="section-text"><p class="eyebrow">Desarrollo</p><h2>Futuras ampliaciones</h2>
+            <p>La primera etapa contempla los cursos de primer año. Una integración posterior podrá sumar acceso por roles, avisos en tiempo real y herramientas de gestión conectadas a servicios institucionales seguros.</p>
+            <p>Actualmente, las acciones privadas son una demostración local y no constituyen un sistema de autenticación.</p>
+        </div>
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85" alt="Herramientas digitales para el aprendizaje"></div>
+    </section>
+</main>
+<footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Secundario José Manuel Estrada N°1</footer>
+<script src="js/app.js" defer></script>
+<script src="js/auth.js" defer></script>
+
+</body>
+</html>

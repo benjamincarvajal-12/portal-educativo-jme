@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+:root {
+	--ink: #203331;
+	--forest: #174b43;
+	--accent: #c35f43;
+	--paper: #f5f4ef;
+	font-family: "Aptos", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: clamp(28px, 8vw, 96px);
+	background: var(--paper);
+	color: var(--ink);
+	line-height: 1.7;
+}
+h1 {
+	max-width: 900px;
+	margin: 0 auto 24px;
+	color: var(--forest);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 42px;
+}
+a {
+	display: block;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 22px 24px;
+	border: 1px solid #e4e6df;
+	border-left: 4px solid var(--accent);
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(31, 55, 49, .06);
+	color: var(--forest);
+	font-weight: 600;
+	text-decoration: none;
+}
+a:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(31, 55, 49, .1); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+@media (max-width: 520px) {
+	h1 { font-size: 34px; }
+}
+</style>
+<meta name="theme-color" content="#0F172A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+</head>
+<body>
+<nav class="site-nav"><div class="nav-inner">
+	<a class="brand" href="alumno.html"><span class="brand-mark">🏫</span><span class="brand-name">JME N°1<span class="brand-subtitle">Portal Educativo</span></span></a>
+	<div class="nav-links"><a href="alumno.html">🏠 Inicio</a><a href="novedades.html">📰 Novedades</a><a href="cursos.html">📚 Cursos</a><a href="preceptores.html">👨‍🏫 Preceptores</a><a href="acerca.html">ℹ️ Acerca de</a></div>
+</div></nav>
+<main class="page-shell">
+	<header class="page-intro"><p class="eyebrow">Aprendizaje</p><h1>📚 Cursos</h1><p>Accede a avisos y recursos de cada grupo.</p></header>
+	<section class="section"><div class="card-grid" data-course-grid></div></section>
+</main>
+<footer class="app-footer">PORTAL EDUCATIVO JME N°1</footer>
+<script src="js/app.js" defer></script>
+<script src="js/auth.js" defer></script>
+
+</body>
+</html>

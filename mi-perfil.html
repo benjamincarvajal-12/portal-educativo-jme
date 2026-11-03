@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+    <title>Perfil y configuración | Portal Educativo JME N°1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-profile-page>
+    <nav class="site-nav"><div class="nav-inner">
+        <a class="brand" href="alumno.html"><span class="brand-mark">🏫</span><span class="brand-name">JME N°1<span class="brand-subtitle">Configuración</span></span></a>
+        <div class="nav-links"><a data-profile-home href="alumno.html">Inicio</a><button class="nav-exit" type="button" data-logout>Cerrar sesión</button></div>
+    </div></nav>
+    <main class="page-shell auth-page">
+        <header class="page-intro"><p class="eyebrow">Cuenta</p><h1>⚙️ Perfil y configuración</h1><p>Administra tus datos personales y la contraseña de tu cuenta.</p></header>
+        <section class="auth-profile-card" id="account-profile">
+            <div class="profile-avatar" aria-hidden="true">👤</div>
+            <dl class="auth-profile-details">
+                <div><dt>Nombre</dt><dd data-profile-value="name"></dd></div>
+                <div><dt>Apellido</dt><dd data-profile-value="surname"></dd></div>
+                <div><dt>Rol</dt><dd data-profile-value="role"></dd></div>
+                <div><dt>Correo</dt><dd data-profile-value="email"></dd></div>
+                <div><dt>Nombre de usuario</dt><dd data-profile-value="username"></dd></div>
+            </dl>
+        </section>
+        <section class="dashboard-panel account-settings-panel" id="password-settings">
+            <h2>Datos personales</h2>
+            <form class="form-grid" data-account-profile-form>
+                <div class="field"><label for="profile-first-name">Nombre</label><input class="control" id="profile-first-name" name="first-name" required maxlength="60"></div>
+                <div class="field"><label for="profile-last-name">Apellido</label><input class="control" id="profile-last-name" name="last-name" required maxlength="80"></div>
+                <div class="field full"><button class="button" type="submit">Guardar datos</button><p class="status-message" data-profile-status aria-live="polite"></p></div>
+            </form>
+        </section>
+        <section class="dashboard-panel account-settings-panel">
+            <h2>Cambiar contraseña</h2>
+            <p class="form-note">Confirma tu contraseña actual y escribe una nueva de al menos 6 caracteres.</p>
+            <form class="form-grid" data-change-password-form>
+                <div class="field"><label for="current-password">Contraseña actual</label><input class="control" id="current-password" name="current-password" type="password" autocomplete="current-password" required></div>
+                <div class="field"><label for="new-password">Nueva contraseña</label><input class="control" id="new-password" name="new-password" type="password" autocomplete="new-password" minlength="6" required></div>
+                <div class="field"><label for="confirm-password">Repetir nueva contraseña</label><input class="control" id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="6" required></div>
+                <div class="field full"><button class="button" type="submit">Cambiar contraseña</button><p class="status-message" data-password-status aria-live="polite"></p></div>
+            </form>
+            <p class="auth-security-note">Por seguridad, el portal no puede mostrar la contraseña guardada. El botón 👁 permite ver temporalmente lo que escribes en los campos. Si tu cuenta no tiene correo, no podrás recuperar la contraseña por correo si la olvidas.</p>
+        </section>
+        <p class="auth-security-note">Tu identidad y permisos se validan mediante Firebase Authentication y Firestore.</p>
+        <button class="button danger" type="button" data-logout>Cerrar sesión</button>
+    </main>
+    <footer class="app-footer">PORTAL EDUCATIVO JME N°1</footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

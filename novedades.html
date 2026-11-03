@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Novedades</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+nav{
+    background:#0f172a;
+    padding:15px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.titulo{
+    padding:120px 10% 50px;
+}
+
+.titulo h1{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.titulo p{
+    max-width:700px;
+    line-height:1.7;
+}
+
+.cursos{
+    padding:20px 10% 80px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.curso{
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    text-decoration:none;
+    color:inherit;
+}
+
+.curso:hover{
+    transform:translateY(-8px);
+
+    background:#2563eb;
+
+    color:white;
+}
+
+</style>
+
+<style>
+:root {
+    --ink: #203331;
+    --forest: #174b43;
+    --accent: #c35f43;
+    --paper: #f5f4ef;
+    font-family: "Aptos", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); line-height: 1.7; }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 14px clamp(18px, 5vw, 76px);
+    gap: 20px;
+    background: var(--forest);
+    box-shadow: 0 5px 22px rgba(22, 49, 45, .13);
+}
+nav > div:first-child { font-family: Georgia, "Times New Roman", serif; font-size: 20px; }
+nav > div:last-child { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+nav a { margin-left: 0; color: rgba(255, 255, 255, .86); font-size: 14px; }
+nav a:hover, nav a:focus-visible { color: #f0b495; }
+.titulo { max-width: 1200px; margin: auto; padding: 76px clamp(22px, 7vw, 96px) 28px; }
+.titulo h1 { margin-bottom: 12px; color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 42px; }
+.titulo p { max-width: 680px; color: #586762; }
+.cursos { max-width: 1200px; margin: auto; padding: 14px clamp(22px, 7vw, 96px) 80px; gap: 14px; }
+.curso {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e4e6df;
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(31, 55, 49, .06);
+    font-size: 17px;
+    font-weight: 600;
+}
+.curso:hover { transform: translateY(-3px); background: var(--forest); color: white; box-shadow: 0 14px 30px rgba(31, 55, 49, .14); }
+nav a:focus-visible, .curso:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+@media (max-width: 700px) {
+    nav { align-items: flex-start; flex-direction: column; }
+    .titulo { padding-top: 52px; }
+    .titulo h1 { font-size: 36px; }
+    .cursos { padding-bottom: 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+</style>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#0F172A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+</head>
+
+<body>
+
+<nav class="site-nav"><div class="nav-inner">
+    <a class="brand" href="alumno.html"><span class="brand-mark">🏫</span><span class="brand-name">JME N°1<span class="brand-subtitle">Portal Educativo</span></span></a>
+    <div class="nav-links"><a href="alumno.html">🏠 Inicio</a><a href="novedades.html">📰 Novedades</a><a href="cursos.html">📚 Cursos</a><a href="preceptores.html">👨‍🏫 Preceptores</a><a href="acerca.html">ℹ️ Acerca de</a></div>
+</div></nav>
+
+<main class="page-shell">
+<header class="page-intro">
+<p class="eyebrow">Información académica</p>
+
+<h1>Novedades</h1>
+
+<p>
+Consulta avisos, actividades, evaluaciones y comunicados publicados para cada curso. Selecciona un grupo para ver su información.
+</p>
+
+</header>
+
+<section class="section">
+<div class="section-heading"><div><h2 class="section-title">Novedades por curso</h2><p class="section-copy">La información publicada se muestra en modo lectura para estudiantes.</p></div></div>
+
+<div class="card-grid" data-course-grid></div>
+
+</section>
+</main>
+
+<footer class="app-footer">PORTAL EDUCATIVO JME N°1</footer>
+<script src="js/app.js" defer></script>
+<script src="js/auth.js" defer></script>
+</body>
+</html>

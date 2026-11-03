@@ -1,0 +1,41 @@
+{
+  "id": "./index.html",
+  "name": "Portal Educativo JME N°1",
+  "short_name": "Portal JME",
+  "description": "Portal educativo del Secundario José Manuel Estrada N°1.",
+  "lang": "es-AR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "./assets/jme-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/jme-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Cursos",
+      "short_name": "Cursos",
+      "url": "./cursos.html",
+      "icons": [{ "src": "./assets/jme-icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Asistencia",
+      "short_name": "Asistencia",
+      "url": "./curso1.html#asistencia",
+      "icons": [{ "src": "./assets/jme-icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ]
+}

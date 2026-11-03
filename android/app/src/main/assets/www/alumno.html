@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Escuela Secundaria José Manuel Estrada N°1 | Portal Educativo</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* MENU */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    background:#0f172a;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 40px;
+
+    z-index:1000;
+}
+
+.logo{
+
+    font-size:22px;
+
+    font-weight:bold;
+}
+
+.links{
+
+    display:flex;
+
+    gap:25px;
+}
+
+.links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.links a:hover{
+
+    color:#60a5fa;
+}
+
+/* CABECERA */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content{
+
+    animation:entrada 1.2s ease;
+}
+
+.hero h1{
+
+    font-size:60px;
+}
+
+.hero p{
+
+    margin-top:15px;
+
+    font-size:20px;
+}
+
+/* SECCIONES */
+
+.seccion{
+
+    padding:100px 10%;
+}
+
+.seccion h2{
+
+    color:#1e3a8a;
+
+    margin-bottom:25px;
+}
+
+.contenedor{
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+}
+
+.texto{
+
+    flex:1;
+}
+
+.imagen{
+
+    flex:1;
+}
+
+.imagen img{
+
+    width:100%;
+
+    border-radius:15px;
+}
+
+/* TARJETAS */
+
+.tarjetas{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-top:30px;
+}
+
+.tarjeta{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    transition:.3s;
+}
+
+.tarjeta:hover{
+
+    transform:translateY(-8px);
+}
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+</style>
+
+<style>
+:root {
+    --ink: #203331;
+    --forest: #174b43;
+    --accent: #c35f43;
+    --paper: #f5f4ef;
+    --muted: #667570;
+    font-family: "Aptos", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); line-height: 1.7; }
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 14px clamp(18px, 5vw, 76px);
+    gap: 18px;
+    background: rgba(23, 75, 67, .97);
+    box-shadow: 0 5px 22px rgba(22, 49, 45, .13);
+    backdrop-filter: blur(12px);
+}
+.logo { font-family: Georgia, "Times New Roman", serif; font-size: 21px; white-space: nowrap; }
+.links { flex-wrap: wrap; justify-content: flex-end; gap: 8px 20px; }
+.links a { font-size: 14px; color: rgba(255, 255, 255, .86); }
+.links a:hover, .links a:focus-visible { color: #f0b495; }
+.hero {
+    min-height: 68svh;
+    height: auto;
+    padding: 90px 24px;
+    background-position: center 42%;
+}
+.hero h1 { font-family: Georgia, "Times New Roman", serif; font-size: 56px; }
+.hero p { color: rgba(255, 255, 255, .88); }
+.seccion { max-width: 1200px; margin: auto; padding: 72px clamp(22px, 7vw, 96px); }
+.seccion h2 { color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 32px; }
+.seccion p { color: #4b5c57; line-height: 1.85; }
+.contenedor { gap: 46px; }
+.imagen img { display: block; max-height: 390px; object-fit: cover; border-radius: 6px; }
+.tarjetas { gap: 14px; margin-top: 26px; }
+.tarjeta {
+    padding: 22px;
+    border: 1px solid #e4e6df;
+    border-top: 3px solid var(--accent);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(31, 55, 49, .06);
+    color: var(--ink);
+    line-height: 1.55;
+}
+.tarjeta:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(31, 55, 49, .1); }
+nav a:focus-visible { outline: 2px solid #f0b495; outline-offset: 4px; }
+
+@media (max-width: 700px) {
+    nav { align-items: flex-start; flex-direction: column; }
+    .links { justify-content: flex-start; gap: 7px 16px; }
+    .hero { min-height: 58svh; }
+    .hero h1 { font-size: 40px; }
+    .seccion { padding-top: 52px; padding-bottom: 52px; }
+    .seccion h2 { font-size: 27px; }
+    .contenedor { gap: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+</style>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#0F172A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+</head>
+<body>
+
+<nav class="site-nav"><div class="nav-inner">
+    <a class="brand" href="alumno.html"><span class="brand-mark">🏫</span><span class="brand-name">JME N°1<span class="brand-subtitle">Portal Educativo</span></span></a>
+    <div class="nav-links"><a href="alumno.html">🏠 Inicio</a><a href="asistencia.html">👥 Asistencia</a><a href="novedades.html">📰 Novedades</a><a href="cursos.html">📚 Cursos</a><a href="preceptores.html">👨‍🏫 Preceptores</a><a href="acerca.html">ℹ️ Acerca de</a></div>
+</div></nav>
+
+<section class="hero home-hero" id="inicio">
+
+<div class="home-hero-slide is-active" aria-hidden="true"></div>
+<div class="home-hero-slide" aria-hidden="true"></div>
+<div class="home-hero-slide" aria-hidden="true"></div>
+
+<div class="hero-content">
+
+<p class="eyebrow">Comunidad · Aprendizaje · Información</p>
+<h1>Escuela Secundaria<br>José Manuel Estrada N°1</h1>
+
+<p>
+Un espacio para aprender, informarse y compartir en comunidad.
+</p>
+<div class="button-row hero-actions">
+    <a class="button" href="#comunidad">Conocer la escuela</a>
+    <a class="button secondary" href="#cursos">Explorar cursos</a>
+</div>
+
+</div>
+
+</section>
+
+<main class="page-shell">
+    <section class="section split-section reveal" id="bienvenida">
+        <div class="section-text"><p class="eyebrow">Un espacio para la comunidad</p><h2>Bienvenida</h2>
+            <p>Este portal reúne información escolar, avisos importantes, actividades y recursos educativos para estudiantes y equipos de la institución.</p>
+            <p>La propuesta comienza con los cursos de primer año y podrá crecer junto con las necesidades de la comunidad educativa.</p>
+        </div>
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85" alt="Estudiantes trabajando en el aula"></div>
+    </section>
+
+    <section class="section split-section reverse reveal" id="historia">
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=85" alt="Edificio de una institución educativa"></div>
+        <div class="section-text"><p class="eyebrow">Nuestra institución</p><h2>Historia y comunidad</h2>
+            <p>El Secundario José Manuel Estrada N°1 es una institución dedicada a la formación académica y al desarrollo integral de sus estudiantes.</p>
+            <p>La reseña histórica institucional podrá ampliarse con fechas y documentos oficiales aportados por la escuela.</p>
+        </div>
+    </section>
+
+    <section class="section reveal" id="comunidad">
+        <div class="section-heading"><div><p class="eyebrow">Un portal para todos</p><h2 class="section-title">Comunidad educativa</h2></div></div>
+        <div class="card-grid community-grid">
+            <article class="card community-card reveal">
+                <span class="card-icon" aria-hidden="true">🏫</span>
+                <h3>Dirección</h3>
+                <p>Accede al espacio de gestión y a la información institucional.</p>
+                <a class="card-action" href="login.html?role=director">Ir a Dirección →</a>
+            </article>
+            <article class="card community-card reveal">
+                <span class="card-icon" aria-hidden="true">👩‍🏫</span>
+                <h3>Preceptores</h3>
+                <p>Encuentra información y recursos para acompañar cada curso.</p>
+                <a class="card-action" href="preceptores.html">Conocer preceptoría →</a>
+            </article>
+            <article class="card community-card reveal">
+                <span class="card-icon" aria-hidden="true">📚</span>
+                <h3>Cursos</h3>
+                <p>Consulta avisos, actividades y recursos de los cursos disponibles.</p>
+                <a class="card-action" href="#cursos">Ver cursos →</a>
+            </article>
+            <article class="card community-card reveal">
+                <span class="card-icon" aria-hidden="true">ℹ️</span>
+                <h3>Información institucional</h3>
+                <p>Conoce el propósito del portal y nuestra comunidad educativa.</p>
+                <a class="card-action" href="acerca.html">Conocer más →</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="section split-section reveal" id="proyecto">
+        <div class="section-text"><p class="eyebrow">Información organizada</p><h2>Portal educativo</h2>
+            <p>Un punto de consulta para novedades, cursos, fechas relevantes y canales de contacto, pensado para que la información cotidiana sea más fácil de encontrar.</p>
+        </div>
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85" alt="Estudiantes colaborando en una actividad"></div>
+    </section>
+
+    <section class="section split-section reverse reveal" id="objetivos">
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85" alt="Docente acompañando una clase"></div>
+        <div class="section-text"><p class="eyebrow">Propósito</p><h2>Objetivos compartidos</h2>
+            <p>Acercar la información escolar, apoyar la organización cotidiana y fortalecer el vínculo entre estudiantes, familias y equipos institucionales.</p>
+            <p>El portal complementa la actividad educativa; no reemplaza los canales oficiales de comunicación de la escuela.</p>
+        </div>
+    </section>
+
+    <section class="section split-section reveal" id="futuro">
+        <div class="section-text"><p class="eyebrow">Próximas etapas</p><h2>Futuras ampliaciones</h2>
+            <p>Podrán incorporarse más recursos, cursos y herramientas cuando se integren servicios institucionales seguros para gestionar cuentas y datos.</p>
+        </div>
+        <div class="section-media"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85" alt="Equipo trabajando con tecnología educativa"></div>
+    </section>
+
+    <section class="section reveal" id="cursos">
+        <div class="section-heading"><div><p class="eyebrow">Acceso rápido</p><h2 class="section-title">Cursos disponibles</h2></div><a class="text-link" href="cursos.html">Ver todos</a></div>
+        <div class="card-grid" data-course-grid></div>
+    </section>
+</main>
+
+<footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Secundario José Manuel Estrada N°1</footer>
+<script src="js/app.js" defer></script>
+<script src="js/auth.js" defer></script>
+</body>
+</html>

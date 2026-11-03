@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+    <title>Crear cuentas institucionales | Portal Educativo JME N°1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-dashboard-role="admin">
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="admin.html"><span class="brand-mark">⚙️</span><span class="brand-name">JME N°1<span class="brand-subtitle">Administración</span></span></a>
+            <div class="nav-links">
+                <a href="admin.html">Panel de administración</a>
+                <a href="alumno.html">Portal educativo</a>
+                <a href="mi-perfil.html">👤 Mi Perfil</a>
+                <button class="nav-exit" type="button" data-logout>Cerrar sesión</button>
+            </div>
+        </div>
+    </nav>
+    <main class="dashboard-wrap">
+        <header class="dashboard-head">
+            <div>
+                <p class="eyebrow">Gestión de acceso</p>
+                <h1 class="dashboard-title">Crear cuentas institucionales</h1>
+                <p>Registra cuentas de preceptoría, dirección y administración.</p>
+            </div>
+            <span class="badge">Solo administradores</span>
+        </header>
+        <div class="notice-banner">Esta página requiere una sesión con rol Administrador. Firebase Authentication y las reglas de Firestore validan los permisos antes de crear cada cuenta.</div>
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Secciones de administración">
+                <a href="admin.html">📊 Resumen</a><a href="admin-asistencia.html">👥 Asistencia</a><a href="admin-avisos.html">📢 Avisos</a><a href="admin-cursos.html">📚 Cursos</a><a href="gestionar-cuentas.html" aria-current="page">👥 Crear cuentas</a><a href="admin-contactos.html">📇 Contactos</a><a href="admin-consultas.html">✉️ Consultas</a><a href="admin-configuracion.html">⚙️ Configuración</a>
+            </aside>
+            <div class="dashboard-main">
+            <section class="dashboard-panel auth-user-page-panel" aria-labelledby="create-user-heading">
+            <h2 id="create-user-heading">Nueva cuenta de personal</h2>
+            <p class="section-copy">La cuenta podrá iniciar sesión con el correo y la contraseña definidos aquí.</p>
+            <form class="form-grid auth-user-form" data-auth-user-form>
+                <div class="field">
+                    <label for="account-first-name">Nombre</label>
+                    <input class="control" id="account-first-name" name="account-first-name" autocomplete="given-name" required maxlength="60">
+                </div>
+                <div class="field">
+                    <label for="account-last-name">Apellido</label>
+                    <input class="control" id="account-last-name" name="account-last-name" autocomplete="family-name" required maxlength="80">
+                </div>
+                <div class="field">
+                    <label for="account-email">Correo electrónico</label>
+                    <input class="control" id="account-email" name="account-email" type="email" autocomplete="email" required maxlength="254">
+                </div>
+                <div class="field">
+                    <label for="account-role">Rol institucional</label>
+                    <select class="control" id="account-role" name="account-role" required>
+                        <option value="preceptor">Preceptor</option>
+                        <option value="director">Director</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="account-password">Contraseña <span>(mínimo 6 caracteres)</span></label>
+                    <input class="control" id="account-password" name="account-password" type="password" required minlength="6" autocomplete="new-password">
+                </div>
+                <div class="field full">
+                    <button class="button" type="submit">Crear cuenta institucional</button>
+                    <p class="status-message" data-auth-status aria-live="polite"></p>
+                </div>
+            </form>
+            </section>
+            <section class="dashboard-panel auth-user-page-panel" aria-labelledby="accounts-heading">
+            <h2 id="accounts-heading">Cuentas registradas</h2>
+            <p class="section-copy">Directorio sincronizado con Firebase.</p>
+            <div class="data-list" data-auth-user-list aria-live="polite"></div>
+            </section>
+            </div>
+        </div>
+        <div class="button-row auth-user-page-back">
+            <a class="button secondary" href="admin.html">Volver a Administración</a>
+        </div>
+    </main>
+    <footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Gestión institucional</footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

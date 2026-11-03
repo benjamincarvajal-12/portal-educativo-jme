@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preceptoría | Portal Educativo JME N°1</title>
+    <link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#0F172A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="assets/jme-icon.svg">
+</head>
+<body data-dashboard-role="preceptor">
+    <nav class="site-nav"><div class="nav-inner">
+        <a class="brand" href="preceptor.html"><span class="brand-mark">👨‍🏫</span><span class="brand-name">JME N°1<span class="brand-subtitle">Preceptoría</span></span></a>
+        <div class="nav-links"><a href="alumno.html">Portal alumno</a><a href="novedades.html">Novedades</a><a href="mi-perfil.html">👤 Mi Perfil</a><button class="nav-exit" type="button" data-logout>Cerrar sesión</button></div>
+    </div></nav>
+    <main class="dashboard-wrap">
+        <header class="dashboard-head"><div><p class="eyebrow">Gestión académica</p><h1 class="dashboard-title">Espacio de preceptoría</h1><p>Publica avisos y revisa consultas recibidas.</p></div><span class="badge">Firebase</span></header>
+        <div class="notice-banner">Los permisos y los datos se validan con Firebase Authentication y las reglas de Firestore.</div>
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Secciones de preceptoría"><a href="#resumen">📊 Resumen</a><a href="#asistencia">👥 Asistencia</a><a href="#avisos">📢 Avisos</a><a href="#consultas">✉️ Consultas</a><a href="novedades.html">📰 Vista pública</a></aside>
+            <div class="dashboard-main">
+                <section class="dashboard-panel" id="resumen"><h2>Resumen</h2><div class="stats-grid" data-stats></div></section>
+                <section class="section" id="asistencia"><div class="attendance-app" data-attendance-app data-view="dashboard" data-role="preceptor"></div></section>
+                <section class="dashboard-panel" id="avisos"><h2>📢 Crear un aviso</h2>
+                    <form class="form-grid" data-notice-form>
+                        <input type="hidden" name="notice-id" value="">
+                        <div class="field"><label for="preceptor-notice-title">Título</label><input class="control" id="preceptor-notice-title" name="notice-title" required maxlength="100"></div>
+                        <div class="field"><label for="preceptor-notice-course">Curso</label><select class="control" id="preceptor-notice-course" name="notice-course" required></select></div>
+                        <div class="field full"><label for="preceptor-notice-body">Contenido</label><textarea class="control" id="preceptor-notice-body" name="notice-body" required maxlength="2000"></textarea></div>
+                        <div class="field full"><button class="button" type="submit">Publicar aviso</button><p class="status-message" data-status aria-live="polite"></p></div>
+                    </form>
+                    <div class="data-list" data-managed-notices></div>
+                </section>
+                <section class="dashboard-panel" id="consultas"><h2>✉️ Consultas de estudiantes</h2><p class="form-note">Las consultas se sincronizan con Firestore en tiempo real.</p><div class="data-list" data-query-list></div></section>
+            </div>
+        </div>
+    </main>
+    <footer class="app-footer">PORTAL EDUCATIVO JME N°1 · Preceptoría</footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/attendance.js" defer></script>
+</body>
+</html>

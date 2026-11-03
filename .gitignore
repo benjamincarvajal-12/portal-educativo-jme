@@ -1,0 +1,21 @@
+# Android / Gradle
+.gradle/
+**/build/
+local.properties
+*.iml
+
+# Android Studio / IntelliJ
+.idea/
+
+# Paquetes compilados y claves de firma
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivo comprimido del proyecto
+/Portal-JME-Android.zip
